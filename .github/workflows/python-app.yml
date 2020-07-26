@@ -29,13 +29,13 @@ jobs:
         pip install --editable .             
     - name: Scan Security Issues with bandit
       run: |
-        bandit
+        bandit helloworld.py
     - name: Lint with Black
       run: |
-        black
+        black helloworld.py
     - name: Ensure correct import statement
       run: |
-        isort
+        isort helloworld.py
     - name: Test with pytest
       run: |
         pytest
