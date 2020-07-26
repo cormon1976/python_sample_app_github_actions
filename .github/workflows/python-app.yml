@@ -27,6 +27,15 @@ jobs:
     - name: Run setup.py
       run: |
         pip install --editable .             
+    - name: Scan Security Issues with bandit
+      run: |
+        bandit
+    - name: Lint with Black
+      run: |
+        black
+     - name: Ensure correct import statement
+      run: |
+        isort
     - name: Test with pytest
       run: |
         pytest
