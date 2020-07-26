@@ -33,7 +33,7 @@ jobs:
     - name: Lint with Black
       run: |
         black
-     - name: Ensure correct import statement
+    - name: Ensure correct import statement
       run: |
         isort
     - name: Test with pytest
